@@ -1,0 +1,14 @@
+
+### Explanation
+
+- **Installation:** Provides instructions on how to install `cutsub` either via pip or by cloning the repository.
+
+- **Usage:** Shows how to use the CLI tool with an example command.
+
+- **Example:** Provides a specific example of usage to clarify how to cut subtitles.
+
+- **Contributing:** Guidelines for contributing to the project, including steps to fork the repository, make changes, and submit pull requests.
+
+- **License:** Specifies that the project is licensed under the MIT License, with a link to the `LICENSE` file for more details.
+
+Make sure to replace placeholders like `yourusername` with your actual GitHub username and customize any other details specific to your project. This README.md file will help users understand what your project does, how to use it, and how to contribute to its development.
