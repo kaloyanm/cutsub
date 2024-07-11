@@ -2,14 +2,10 @@ from pysubs2 import SSAFile, make_time
 
 
 def parse_time(time_str):
-    hours, minutes, seconds = map(int, time_str.split(':'))
+    hours, minutes, seconds = map(int, time_str.split(":"))
     seconds, milliseconds = divmod(seconds, 1)
 
-    return {
-        'h': hours,
-        'm': minutes,
-        's': seconds
-    }
+    return {"h": hours, "m": minutes, "s": seconds}
 
 
 def cut_subtitle_file(input_file, output_file, start_time, end_time):
@@ -20,7 +16,9 @@ def cut_subtitle_file(input_file, output_file, start_time, end_time):
     end_ms = make_time(**end_time)
 
     # Filter subtitles based on start and end time
-    filtered_events = [event for event in subs.events if start_ms <= event.start < end_ms]
+    filtered_events = [
+        event for event in subs.events if start_ms <= event.start < end_ms
+    ]
 
     if not filtered_events:
         # If there are no events in the given time range, save an empty subtitle file
