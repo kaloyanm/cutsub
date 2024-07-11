@@ -2,7 +2,6 @@ black==24.4.2
 cfgv==3.4.0
 chardet==5.2.0
 click==8.1.7
--e git+ssh://git@github.com/kaloyanm/cutsub.git@8000b33e527e92a07f7e73cda412a6d8c04bcaad#egg=cutsub
 distlib==0.3.8
 exceptiongroup==1.2.1
 filelock==3.15.4
