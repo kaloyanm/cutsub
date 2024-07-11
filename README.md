@@ -7,7 +7,7 @@
 You can install cutsub using pip:
 
 ```bash
-pip install cutsub
+>>> pip install cutsub
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ pip install cutsub
 To cut a subtitle file, use the cutsub command followed by the input file, output file, start time, and end time:
 
 ```bash
-cutsub input.srt output.srt 00:01:00 00:02:00
+>>> cutsub input.srt output.srt 00:01:00 00:02:00
 ```
 
 ## Parameters
@@ -24,8 +24,8 @@ cutsub input.srt output.srt 00:01:00 00:02:00
 |--------------|-------------------------------------------------------------|----------------|
 | `input_file` | Path to the input subtitle file                             | `input.srt`    |
 | `output_file`| Path to the output subtitle file                            | `output.srt`   |
-| `start_time` | Start time in the format `HH:MM:SS,MS`                      | `00:01:00,000` |
-| `end_time`   | End time in the format `HH:MM:SS,MS`                        | `00:02:00,000` |
+| `start_time` | Start time in the format `HH:MM:SS`                         | `00:01:00`     |
+| `end_time`   | End time in the format `HH:MM:SS`                           | `00:02:00`     |
 
 ## License
 
