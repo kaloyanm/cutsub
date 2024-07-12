@@ -10,7 +10,6 @@ def parse_time(time_str):
 
 def cut_subtitle_file(input_file, output_file, start_time, end_time):
     subs = SSAFile.load(input_file)
-
     # Convert start_time and end_time to milliseconds
     start_ms = make_time(**start_time)
     end_ms = make_time(**end_time)

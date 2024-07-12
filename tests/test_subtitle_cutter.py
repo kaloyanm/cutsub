@@ -12,6 +12,7 @@ def test_cut_subtitle_file(sample_srt_path, tmp_path):
     cut_subtitle_file(sample_srt_path, str(output_file), start_time, end_time)
 
     output_subs = SSAFile.load(str(output_file))
+
     assert len(output_subs.events) == 1
     assert output_subs.events[0].text == "Sample subtitle"
 
@@ -29,6 +30,18 @@ def test_parse_time(input_str, expected_output):
     assert parse_time(input_str) == expected_output
 
 
-def test_parse_time_invalid_format():
+@pytest.mark.parametrize(
+    "invalid_format",
+    [
+        "invalid_time_format",
+        "00:00:00.000",
+        "00:00",
+        "00:00:00:000",
+        "00:00:00.000",
+        "00:00:00.000.000",
+        "00:00:",
+    ],
+)
+def test_parse_time_invalid_format(invalid_format):
     with pytest.raises(ValueError):
-        parse_time("invalid_time_format")
+        parse_time(invalid_format)
